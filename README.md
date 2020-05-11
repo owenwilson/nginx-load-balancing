@@ -1,6 +1,6 @@
 # Nginx - Virtualhost - Loadbalancing - Docker - Docker-compose
 
-###Nota
+### Nota
 
 - Remember to have nginx installed on your linux host and copy the **example-vhost-nginx** file to **/etc/nginx/site-available/** and then create a symbolic link.
 
