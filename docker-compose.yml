@@ -1,0 +1,30 @@
+version: "3"
+services:
+  app1:
+    image: nginx:latest
+    ports: 
+      - 5001:80
+    volumes:
+      - $PWD/nginx1/:/usr/share/nginx/html:ro 
+    networks:
+      - network
+  app2:
+    image: nginx:latest
+    ports:
+      - 5002:80
+    volumes:
+      - $PWD/nginx2/:/usr/share/nginx/html:ro
+    networks:
+      - network
+  app3:
+    image: nginx:latest
+    ports:
+      - 5003:80
+    volumes:
+      - $PWD/nginx3/:/usr/share/nginx/html:ro
+    networks:
+      - network
+networks:
+  network:
+    external:
+      name: my-net
